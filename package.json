@@ -1,0 +1,27 @@
+{
+  "name": "school",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "github-cli": "^0.0.5",
+    "next": "10.0.9",
+    "next-tinacms-github": "^0.38.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-tinacms-github": "^0.38.0",
+    "styled-components": "^5.2.1",
+    "tinacms": "^0.38.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "hygen-next-tinacms-github": "https://github.com/dwalkr/hygen-next-tinacms-github",
+    "typescript": "^4.2.3"
+  }
+}
