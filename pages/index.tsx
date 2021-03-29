@@ -75,11 +75,7 @@ export const getStaticProps: GetStaticProps = async function ({
   previewData,
 }) {
   console.log(
-    await getJsonPreviewProps("content/home.json", preview, previewData)(
-      "content/home.json",
-      preview,
-      previewData
-    )
+    await getJsonPreviewProps("content/home.json", preview, previewData)
   );
   return getJsonPreviewProps("content/home.json", preview, previewData);
 };
