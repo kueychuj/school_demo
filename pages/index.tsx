@@ -3,9 +3,16 @@ import styles from "../styles/Home.module.css";
 import { getGithubFile, parseJson } from "next-tinacms-github";
 import { GetStaticProps } from "next";
 import { getJsonPreviewProps } from "../utils/getJsonPreviewProps";
+import { useGithubJsonForm } from "react-tinacms-github";
+import { usePlugin } from "@tinacms/react-core";
 
 export default function Home({ file }) {
-  const data = file.data;
+  const formOptions = {
+    label: "Home Page",
+    fields: [{ name: "title", component: "text" }],
+  };
+  const [data, form] = useGithubJsonForm(file, formOptions);
+  usePlugin(form);
 
   return (
     <div className={styles.container}>
@@ -74,8 +81,5 @@ export const getStaticProps: GetStaticProps = async function ({
   preview,
   previewData,
 }) {
-  console.log(
-    await getJsonPreviewProps("content/home.json", preview, previewData)
-  );
   return getJsonPreviewProps("content/home.json", preview, previewData);
 };
