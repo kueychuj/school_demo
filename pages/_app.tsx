@@ -18,7 +18,6 @@ export default class Site extends App {
       clientId: process.env.GITHUB_CLIENT_ID,
       baseRepoFullName: process.env.REPO_FULL_NAME, // e.g: tinacms/tinacms.org,
       baseBranch: process.env.BASE_BRANCH, // e.g. 'master' or 'main' on newer repos
-      authScope: "public_repo",
     });
 
     /**
