@@ -75,7 +75,7 @@ const onLogin = async () => {
     headers.append("Authorization", "Bearer " + token);
   }
 
-  const resp = await fetch(`/api/preview`, { headers: headers });
+  const resp = await fetch(`/school_demo/api/preview`, { headers: headers });
   const data = await resp.json();
 
   if (resp.status == 200) window.location.href = window.location.pathname;
@@ -83,7 +83,7 @@ const onLogin = async () => {
 };
 
 const onLogout = () => {
-  return fetch(`/api/reset-preview`).then(() => {
+  return fetch(`/school_demo/api/reset-preview`).then(() => {
     window.location.reload();
   });
 };
